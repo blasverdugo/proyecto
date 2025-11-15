@@ -2,7 +2,7 @@
 import { alertaExito, alertaError } from './alerts.js';
 import {renderizarTablaUsuarios} from './usuarios.js'
 
-import {obtenerUsuarios, guardarUsuario} from '../base_de_datos/usuarios_db.js'
+import {obtenerUsuarios, guardarUsuario,CLAVE_USUARIOS} from '../base_de_datos/usuarios_db.js'
 import {  obtenerSiguienteCodigo } from '../base_de_datos/bd.js';
 
 // ELEMENTOS HTML
@@ -72,7 +72,7 @@ formAltaUsuario.addEventListener("submit", (e) => {
 
   // Crear el nuevo usuario
   const nuevoUsuario = {
-    codigo: obtenerSiguienteCodigo(),
+    codigo: obtenerSiguienteCodigo(CLAVE_USUARIOS),
     dni: dni,
     nombreYApellido: nombreYApellido,
     email: email,

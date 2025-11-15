@@ -8,7 +8,7 @@ import {
 
 
 // USUARIOS
-const CLAVE_USUARIOS = "usuarios";
+export const CLAVE_USUARIOS = "usuarios";
 
 export function obtenerUsuarios() {
   let usuarios = obtenerArray(CLAVE_USUARIOS);
